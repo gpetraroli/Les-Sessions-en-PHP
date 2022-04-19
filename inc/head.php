@@ -40,14 +40,21 @@
                     <li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                            Cart
+                            Cart (<?= isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qta')) : 0?>)
                         </a>
+                    </li>
+                    <li>
+                        <?php if(isset($_SESSION['name'])): ?>
+                            <a href="/logout.php">logout</a>
+                        <?php else: ?>
+                            <a href="/login.php">login</a>
+                        <?php endif; ?>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid text-right">
-        <strong>Hello Wilder !</strong>
+        <strong>Hello <?= $_SESSION['name'] ?? 'Wilder' ?> !</strong>
     </div>
 </header>

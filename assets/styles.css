@@ -69,3 +69,20 @@ section.cookies{
     height: 60px;
   }
 }
+
+.cart-list__item {
+    padding: 2rem;
+    display: flex;
+    align-content: center;
+}
+
+.cart-list__item:nth-child(even) {
+    background-color: #ddd;
+}
+
+.cart-list__text {
+    margin-left: 2rem;
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 2rem;
+}

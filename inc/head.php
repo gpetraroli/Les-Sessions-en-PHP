@@ -34,9 +34,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Chocolates chips</a></li>
-                    <li><a href="#">Nuts</a></li>
-                    <li><a href="#">Gluten full</a></li>
+                    <li><a href="<?= isset($_SESSION['name']) ? '#' : 'login.php' ?>">Chocolates chips</a></li>
+                    <li><a href="<?= isset($_SESSION['name']) ? '#' : 'login.php' ?>">Nuts</a></li>
+                    <li><a href="<?= isset($_SESSION['name']) ? '#' : 'login.php' ?>">Gluten full</a></li>
                     <li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
